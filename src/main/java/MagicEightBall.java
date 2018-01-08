@@ -31,4 +31,19 @@ public class MagicEightBall {
         Collections.shuffle(this.answersList);
         return answersList.get(0);
     }
+
+    public void removeAnswer(String answer) {
+        if(hasAnswer(answer))
+        {
+            answersList.remove(answer);
+        }
+    }
+
+    public boolean hasAnswer(String answer) {
+        return answersList.contains(answer);
+    }
+
+    public void removeAnswerRandomly() {
+        this.answersList.remove(new Random().nextInt(this.answersList.size()));
+    }
 }
