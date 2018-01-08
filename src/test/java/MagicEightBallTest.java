@@ -39,4 +39,10 @@ public class MagicEightBallTest {
         Boolean random_answer_validity = random_answer == "Berlin" || random_answer == "Nassau" || random_answer == "Rome";
         assertEquals(true, random_answer_validity);
     }
+
+    @Test
+    public void addAnswer(){
+        magicBall.addAnswer("Cambera");
+        assertEquals(4, magicBall.getNbAnswers());
+    }
 }
