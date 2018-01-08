@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Random;
 
 public class MagicEightBall {
 
@@ -19,5 +21,14 @@ public class MagicEightBall {
 
     public int getNbAnswers() {
         return this.answersList.size();
+    }
+
+    public String getRandomAnswer_1(){
+        return this.answersList.get(new Random().nextInt(this.answersList.size()));
+    }
+
+    public String getRandomAnswer_2(){
+        Collections.shuffle(this.answersList);
+        return answersList.get(0);
     }
 }
