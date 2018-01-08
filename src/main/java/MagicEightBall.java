@@ -6,10 +6,18 @@ public class MagicEightBall {
 
 
     public MagicEightBall(){
-        this.answersList = new ArrayList<String>();
+        this.answersList = new ArrayList<>();
     }
 
     public ArrayList<String> getAnswersList() {
         return answersList;
+    }
+
+    public void addAnswer(String _answer) {
+        this.answersList.add(_answer);
+    }
+
+    public int getNbAnswers() {
+        return this.answersList.size();
     }
 }

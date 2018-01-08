@@ -17,5 +17,13 @@ public class MagicEightBallTest {
         assertEquals(true, magicBall.getAnswersList().getClass().isInstance(new ArrayList()));
     }
 
+    @Test
+    public void getNbAnswers(){
+        magicBall.addAnswer("Berlin");
+        magicBall.addAnswer("Nassau");
+        magicBall.addAnswer("Rome");
+        assertEquals(3, magicBall.getNbAnswers());
+    }
+
 
 }
