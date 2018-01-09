@@ -62,4 +62,10 @@ public class MagicEightBallTest {
         magicBall.removeAnswerRandomly();
         assertEquals(nbAnswers-1, magicBall.getNbAnswers());
     }
+
+    @Test
+    public void getAnswersCopy(){
+        ArrayList<String> copy = magicBall.getAnswersCopy();
+        assertEquals(true, copy.equals(magicBall.getAnswersCopy()));
+    }
 }

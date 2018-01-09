@@ -46,4 +46,8 @@ public class MagicEightBall {
     public void removeAnswerRandomly() {
         this.answersList.remove(new Random().nextInt(this.answersList.size()));
     }
+
+    public ArrayList<String> getAnswersCopy(){
+        return (ArrayList<String>)this.answersList.clone();
+    }
 }
